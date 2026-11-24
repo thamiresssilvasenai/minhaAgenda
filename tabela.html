@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+</head>
+<body>
+    <h1>Tarefas de agenda</h1>
+
+<script>
+// Passo 1: Criar o array com 7 itens (com aspas e zero à esquerda nas horas)
+    let minhaAgenda = ["\n 08h - Estudar.","\n 09h - Tomar café.","\n 10h - Limpar a casa.","\n 12h - Almoçar.","\n 14h - Trabalhar.","\n 18h - Fazer exercícios.","\n 22h - Dormir."];
+
+    // Passo 2: Verificar o tamanho (usando crases ` ` para interpolar a variável)
+    let quantidadeTarefas = minhaAgenda.length
+    console.log(`Você tem ${quantidadeTarefas} tarefas pendentes.`);
+
+    // Passo 3: Adicionar uma Tarefa Urgente no final
+    minhaAgenda.push("07h - Tarefa Urgente.");
+    console.log(`A tarefa ${minhaAgenda[4]} é urgente.`);
+
+    // Passo 4: Organizar a Lista (agora funciona em ordem cronológica correta)
+    minhaAgenda.sort();
+    console.log(`A tarefa organizada ${minhaAgenda}`);
+
+    // Passo 5: Concluir a Primeira Tarefa (remove o primeiro item)
+    let tarefaRemovidaInicio = minhaAgenda.shift();
+    console.log(`A tarefa ${minhaAgenda[6]}`);
+
+// Passo 6: Desistir da Última Tarefa (remove o último item)
+    let tarefaRemovidaFim = minhaAgenda.pop();
+    console.log(`A tarefa ${minhaAgenda[1]}`);
+
+    // Passo 7: Remover uma Tarefa no Meio (remove 1 item a partir do índice 2)
+    minhaAgenda.splice(2, 1);
+    console.log(`A tarefa ${minhaAgenda[7]}`);
+    </script>
+</body>
+</html>
